@@ -21,13 +21,6 @@ import { AlertModule, AccordionModule } from 'ngx-bootstrap';
   imports: [
     BrowserModule,
     FormsModule,
-    //AppRoutingModule,
-    // RouterModule.forRoot([
-    //   {
-    //     path: "",
-    //     component: HomeComponent
-    //   }
-    // ])
     RouterModule.forRoot(routes),
     AlertModule.forRoot(),
     AccordionModule.forRoot(),
