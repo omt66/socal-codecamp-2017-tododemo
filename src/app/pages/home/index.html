@@ -1,0 +1,15 @@
+<div>
+    Home Page
+    <hr>
+    <div class="simple-panel">
+        Todos ({{getNofTodos()}}):
+        <div>
+            <form action="addTodo()">
+                <input name="todoText" type="text" [(ngModel)]="todoText"  />
+                <button class="btn btn-primary" (click)="addTodo()">Add</button>
+            </form>
+
+            <todo-list [todoList]="todoList"></todo-list>
+        </div>
+    </div>
+</div>

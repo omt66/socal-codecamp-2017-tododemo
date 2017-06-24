@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-12">
+        <input class="col-xs-1" type="checkbox" [(ngModel)]="todo.completed" (click)="handleCheckbox(todo)"/>
+
+        <div *ngIf="!editing">
+            <div class="{{todo.completed ? 'completed': ''}} col-xs-7">
+                {{ todo.text }}
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-primary" (click)="editing=true">Edit</button>
+                <button class="btn btn-danger" (click)="handleDelete(todo)">x</button>
+            </div>
+        </div>
+
+        <div *ngIf="editing">
+            <input class="col-xs-7" type="text" [ngModel]="todo.text" [(ngModel)]="editedText"/>
+            <div class="col-xs-4">
+                <button class="btn btn-success" (click)="handleEdit(todo)">OK</button>
+                <button class="btn btn-danger" (click)="editing=false">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

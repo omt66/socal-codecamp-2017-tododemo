@@ -1,0 +1,9 @@
+<div class="xsimple-panel">
+    <div class="container-fluid">
+        <todo-item *ngFor="let todo of todoList.todos"
+            [todo]="todo"
+            (deleted)="handleDelete(todo)"
+            (edited)="handleEdit(todo)">
+        </todo-item>
+    </div>
+</div>
